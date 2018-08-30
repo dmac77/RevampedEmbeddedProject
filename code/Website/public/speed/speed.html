@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="collapse" id="filter">
+        <div class="card card-body">
+            <form class="">
+                <div class="form-group row">
+                    <label for="typeOfData" class="col-xl-2 col-form-label">Type of Data:</label>
+                    <select class="form-control col-xl-10" id="typeOfData">
+                        <option value="realtime">Real Time Data</option>
+                        <option value="historical">Historical Data</option>
+                    </select>
+                </div>
+                <div class="form-group row" id="pointsRow">
+                    <label for="points" class="col-xl-2 col-form-label">Points on Graph:</label>
+                    <select id="points" class="form-control col-xl-10" ng-model="speed.numPoints"
+                            ng-options="x for x in speed.pointOptions">
+
+                    </select>
+                </div>
+                <div class="form-group row" id="startDateRow">
+                    <label for="startingDate" class="col-xl-2 col-form-label">Starting Date:</label>
+                    <input id="startingDate" class="form-control col-xl-10" type="date" ng-model="speed.startDate">
+                </div>
+                <div class="form-group row" id="startTimeRow">
+                    <label for="startingTime" class="col-xl-2 col-form-label">Starting Time:</label>
+                    <input id="startingTime" class="form-control col-xl-10" type="time" ng-model="speed.startTime">
+                </div>
+                <div class="form-group row" id="endDateRow">
+                    <label for="endingDate" class="col-xl-2 col-form-label">Ending Date:</label>
+                    <input id="endingDate" class="form-control col-xl-10" type="date" ng-model="speed.endDate">
+                </div>
+                <div class="form-group row" id="endTimeRow">
+                    <label for="endingTime" class="col-xl-2 col-form-label">Ending Time:</label>
+                    <input id="endingTime" class="form-control col-xl-10" type="time" ng-model="speed.endTime">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" ng-click="speed.applyFilters()">Apply Filters</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <button id="showFilterBtn" class="btn btn-primary" data-toggle="collapse" href="#filter" role="button">
+        Show Filters
+    </button>
+    <div class="row">
+        <div class="col-xl-12">
+            <canvas id="speedChart"></canvas>
+        </div>
+    </div>
+</div>

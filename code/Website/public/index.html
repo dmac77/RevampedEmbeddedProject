@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <!--AngularJS and UI-Router-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+
+    <!--Vis.js and FontAwesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+
+    <!--Bootstrap and Theme-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
+    <script src="style/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="style/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-mDdzqEimigFhaXpqHTnkj2JumLRbFB9qEVJK77zv7lBrdvhyPgl0WaWE7jloVkek" crossorigin="anonymous">
+
+    <!--User Generated Scripts-->
+    <script src="app.module.js"></script>
+    <script src="app.route.js"></script>
+    <script src="home/home.controller.js"></script>
+    <script src="temperature/temperature.controller.js"></script>
+    <script src="accelerometer/accelerometer.controller.js"></script>
+    <script src="gps/gps.controller.js"></script>
+    <script src="rpm/rpm.controller.js"></script>
+    <script src="speed/speed.controller.js"></script>
+
+    <!--Google Maps CDN-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfE-GVyL_dHbpIyax5lfqHFck5AjpN_iM"></script>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <title>Baylor Baja DAQ</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-color">
+        <a class="navbar-brand" ui-sref="home">Baylor Baja DAQ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" ui-sref="home">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" ui-sref="speed">Vehicle Speed</a>
+                <a class="nav-item nav-link" ui-sref="rpm">Engine RPM</a>
+                <a class="nav-item nav-link" ui-sref="temperature">Transmission Temperature</a>
+                <a class="nav-item nav-link" ui-sref="accelerometer">Acceleration Data</a>
+                <a class="nav-item nav-link" ui-sref="gps">GPS Location</a>
+            </div>
+        </div>
+    </nav>
+    <div id="main" style="height: 100%">
+        <div ui-view style="height: 100%"></div>
+    </div>
+    <div class="footer ">
+        <div class="container">
+            <div class="text-center">
+                <span class="text-muted">For help, contact david_macdonald@baylor.edu</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

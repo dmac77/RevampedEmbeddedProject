@@ -1,0 +1,5 @@
+code/BeagleBone/
+.idea/
+.idea*
+code/Website/node_modules/
+code/Website/public/style/bootstrap
