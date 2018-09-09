@@ -163,8 +163,8 @@
                         {
                             label: "Z Axis",
                             data: vm.accelerationZ,
-                            backgroundColor: '#00ff41',
-                            borderColor: '#00ff41',
+                            backgroundColor: '#005d18',
+                            borderColor: '#005d18',
                             fill: false
                         }]
                     },
