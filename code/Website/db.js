@@ -1,5 +1,5 @@
 let pg = require('pg');
-let constants = require('./constants');
+let constants = require('./constants/db.constants');
 
 let db = new pg.Client({
     host: constants.DBHost,

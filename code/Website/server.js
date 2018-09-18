@@ -28,3 +28,18 @@ app.listen(port, (err) => {
     }
     console.log("Server is running on port: " + port);
 });
+/*
+todo:
+scrub inputs of routes
+add management page
+    create db table
+        users
+            forget password solution
+        control table
+    create api calls
+    create page
+        turn on/off services
+        see services status
+        delete data
+    add controlling service on BBB
+ */
